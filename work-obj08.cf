@@ -1,0 +1,7 @@
+v 4
+file . "tb_fulladder.vhd" "63c359526e50343077080849a6a69388c73ca59f" "20260414114714.332":
+  entity fulltest at 1( 0) + 0 on 13;
+  architecture tb of fulltest at 7( 78) + 0 on 14;
+file . "fulladder.vhd" "3d9556039f9b895d5a16d666357110921e962878" "20260414114714.332":
+  entity fulladder at 1( 0) + 0 on 11;
+  architecture behv of fulladder at 9( 140) + 0 on 12;
