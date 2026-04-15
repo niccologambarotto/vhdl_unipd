@@ -1,0 +1,35 @@
+================================================================================
+ESERCITAZIONE: PROGETTO E VERIFICA DI UN RICONOSCITORE DI NUMERI PRIMI IN VHDL
+================================================================================
+
+1. OBIETTIVO DELL'ESERCIZIO
+Realizzare il codice VHDL per descrivere il circuito combinatorio "Circuito Prime" 
+incaricato di identificare i numeri primi in un range da 0 a 15.
+
+2. SPECIFICHE TECNICHE
+Il sistema deve prevedere i seguenti segnali di interfaccia:
+- Ingresso: "input" (vettore da 4 bit).
+- Uscita: "isPrime" (1 bit).
+  * isPrime = '1' se il valore di input è un numero primo.
+  * isPrime = '0' in tutti gli altri casi.
+
+3. REQUISITI DI IMPLEMENTAZIONE
+Si richiede la stesura del codice VHDL utilizzando tre diversi stili 
+di descrizione architettonica:
+
+A) Descrizione Structural: 
+   Modellazione tramite istanziazione e interconnessione di componenti di base.
+
+B) Descrizione Dataflow: 
+   Modellazione tramite assegnazioni concorrenti di segnali ed espressioni booleane.
+
+C) Descrizione Behavioral: 
+   Modellazione tramite costrutti sequenziali all'interno di un processo 
+   (es. costrutti case o if-then-else).
+
+4. VERIFICA E VALIDAZIONE
+- Sviluppare un file di Testbench per verificare la correttezza logica 
+  di ciascuna architettura.
+- Eseguire la simulazione funzionale tramite la piattaforma EDA Playground.
+
+================================================================================

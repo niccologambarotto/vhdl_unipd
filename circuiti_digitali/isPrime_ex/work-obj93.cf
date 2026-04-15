@@ -1,0 +1,7 @@
+v 4
+file . "isPrime_dataflow.vhd" "c3348ba63fe1968cd59ef651652a436a36bdcf1f" "20260415102235.545":
+  entity isprime at 1( 0) + 0 on 13;
+  architecture behv of isprime at 9( 154) + 0 on 14;
+file . "tb_isPrime_dataflow.vhd" "e83180d4e042569b0be89996e3d3a82ba466ea0f" "20260415104156.011":
+  entity tb_isprime at 1( 0) + 0 on 17;
+  architecture test of tb_isprime at 7( 82) + 0 on 18;
