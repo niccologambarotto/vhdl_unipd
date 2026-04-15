@@ -6,10 +6,10 @@ entity isPrime is
         prime: out STD_LOGIC);
 end isPrime;
 
-architecture behv of isPrime is
+architecture dataflow of isPrime is
 begin
     prime <= (num(0) and not num(1) and num(2)) OR 
                 (num(0) and num(1) and not num(2)) OR
                 (num(1) and not num(2) and not num(3)) OR
                 (num(0) and not num(3));
-end behv;
+end dataflow;
