@@ -1,22 +1,16 @@
 v 4
-file . "tb_isPrime_struct.vhd" "48fd1fdf3bb77a2c916d6154831245afc558bd3a" "20260415114402.600":
-  entity tb_isprime_struct at 1( 0) + 0 on 39;
-  architecture test2 of tb_isprime at 7( 96) + 0 on 40;
-file . "isPrime_structural.vhd" "e9c4898562cc913256150c5794cda03e586bd2c2" "20260415114014.778":
-  entity isprime_struc at 1( 0) + 0 on 35;
-  architecture struct of isprime_struc at 9( 166) + 0 on 36;
-file . "portelogiche.vhd" "bfd7d17a91843a98de9d1588cc37627161bd9396" "20260415113157.331":
-  entity inverter at 1( 0) + 0 on 27;
-  architecture rtl of inverter at 10( 150) + 0 on 28;
-  entity and2 at 16( 222) + 0 on 29;
-  architecture rtl of and2 at 24( 349) + 0 on 30;
-  entity and3 at 30( 420) + 0 on 31;
-  architecture rtl of and3 at 38( 550) + 0 on 32;
-  entity or4 at 44( 626) + 0 on 33;
-  architecture rtl of or4 at 52( 757) + 0 on 34;
-file . "isPrime_dataflow.vhd" "8e1bef7440336370669b5bdb8aa5fb4c3308b186" "20260415110026.005":
-  entity isprime at 1( 0) + 0 on 19;
-  architecture dataflow of isprime at 9( 154) + 0 on 20;
-file . "tb_isPrime_dataflow.vhd" "d2362dc2e14dd72d286d60995d98adf2c215e820" "20260415114400.659":
-  entity tb_isprime at 1( 0) + 0 on 37;
-  architecture test of tb_isprime at 7( 82) + 0 on 38;
+file . "tb_isPrime_struct.vhd" "8301d65f88f22443967b9499501f5fad87a96e10" "20260415124323.051":
+  entity tb_isprime_struct at 1( 0) + 0 on 25;
+  architecture test2 of tb_isprime_struct at 7( 96) + 0 on 26;
+file . "portelogiche.vhd" "bfd7d17a91843a98de9d1588cc37627161bd9396" "20260415123826.847":
+  entity inverter at 1( 0) + 0 on 11;
+  architecture rtl of inverter at 10( 150) + 0 on 12;
+  entity and2 at 16( 222) + 0 on 13;
+  architecture rtl of and2 at 24( 349) + 0 on 14;
+  entity and3 at 30( 420) + 0 on 15;
+  architecture rtl of and3 at 38( 550) + 0 on 16;
+  entity or4 at 44( 626) + 0 on 17;
+  architecture rtl of or4 at 52( 757) + 0 on 18;
+file . "isPrime_structural.vhd" "ffbdcc84daae6c8ae79b29af3e73900304129c66" "20260415123849.191":
+  entity isprime_struc at 1( 0) + 0 on 19;
+  architecture struct of isprime_struc at 10( 167) + 0 on 20;
