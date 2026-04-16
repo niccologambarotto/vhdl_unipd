@@ -21,10 +21,3 @@ Per compilare, simulare e visualizzare le forme d'onda, è necessario avere inst
 * **[GHDL](https://github.com/ghdl/ghdl):** Compilatore e simulatore VHDL (viene utilizzato lo standard VHDL-2008).
 * **[GTKWave](https://gtkwave.sourceforge.net/):** Visualizzatore di forme d'onda per i file `.vcd`.
 * **Make:** Per l'esecuzione dei `Makefile`.
-
-## 🚀 Come eseguire le simulazioni
-
-Entra nella cartella del circuito che desideri testare (es. `mux_4_to_1`):
-
-```bash
-cd circuiti_digitali/mux_4_to_1
