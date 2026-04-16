@@ -1,6 +1,6 @@
 # VHDL UniPD - Esercizi di Circuiti Digitali
 
-Questo repository contiene una raccolta di esercizi e componenti hardware descritti in **VHDL**, realizzati per il corso di Circuiti Digitali all'Università degli Studi di Padova (UniPD).
+Questo repository contiene una raccolta di esercizi e componenti hardware descritti in **VHDL**, realizzati per il corso di Circuiti Digitali ed Elettronica dei Sistemi Digitali all'Università degli Studi di Padova.
 
 ## Struttura del Progetto
 
