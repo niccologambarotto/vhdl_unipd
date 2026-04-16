@@ -1,0 +1,8 @@
+Esercizio:
+
+• Scrivere il codice VHDL di un decoder 2-to-4 con:
+    – Architettura dataflow
+    – Architettura behavioral usando lo statement ‘when else’
+    – Architettura behavioral usando lo statement ‘with select’
+• Realizzare un testbench per simulare il corretto funzionamento del circuito con tutte le combinazioni
+    degli ingressi, usando una delle architetture sopra.

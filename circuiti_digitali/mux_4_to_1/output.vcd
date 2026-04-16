@@ -1,0 +1,47 @@
+$date
+  Thu Apr 16 16:20:33 2026
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module textio $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module tb_mux_dataflow $end
+$var reg 2 ! s[1:0] $end
+$var reg 4 " i[3:0] $end
+$var reg 1 # o $end
+$scope module dut $end
+$var reg 2 $ s[1:0] $end
+$var reg 4 % i[3:0] $end
+$var reg 1 & o $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+b00 !
+b1001 "
+1#
+b00 $
+b1001 %
+1&
+#5000000
+b01 !
+0#
+b01 $
+0&
+#10000000
+b10 !
+b10 $
+#15000000
+b11 !
+1#
+b11 $
+1&
+#20000000
