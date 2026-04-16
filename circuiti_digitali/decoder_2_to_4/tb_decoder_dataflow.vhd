@@ -1,3 +1,11 @@
+----------------------------------------------------------------------------------
+-- Nome Modulo:  Testbench del Decoder 2 to 4
+-- Autore:       Niccolò Gambarotto
+-- Data:         16 Aprile 2026
+--
+-- Descrizione:  Testbench per la simulazione di un Decoder 2 to 4, in particolare
+--               vengono testati tutti e 4 gli ingressi possibili.
+----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.std_logic_1164.all;
 
