@@ -4,7 +4,7 @@ Questo repository contiene una raccolta di esercizi e componenti hardware descri
 
 ## Struttura del Progetto
 
-Il codice è organizzato nella directory `circuiti_digitali/`, suddiviso in sottocartelle per ogni singolo componente o esercizio. Attualmente include:
+Il codice è organizzato nella directory `circuiti_digitali/combinatoria/`, suddiviso in sottocartelle per ogni singolo componente o esercizio. Attualmente include:
 
 * `decoder_2_to_4/`
 * `encoder_4_to_2/`
