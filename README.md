@@ -2,7 +2,7 @@
 
 Questo repository contiene una raccolta di esercizi e componenti hardware descritti in **VHDL**, realizzati per il corso di Circuiti Digitali all'Università degli Studi di Padova (UniPD).
 
-## 📂 Struttura del Progetto
+## Struttura del Progetto
 
 Il codice è organizzato nella directory `circuiti_digitali/`, suddiviso in sottocartelle per ogni singolo componente o esercizio. Attualmente include:
 
@@ -14,7 +14,7 @@ Il codice è organizzato nella directory `circuiti_digitali/`, suddiviso in sott
 
 Ogni cartella è indipendente e contiene i file sorgente (`.vhd`), il testbench relativo (`tb_*.vhd`) e un proprio `Makefile` per automatizzare la simulazione.
 
-## 🛠️ Requisiti e Strumenti
+## Requisiti e Strumenti
 
 Per compilare, simulare e visualizzare le forme d'onda, è necessario avere installato il seguente stack (testato su ambiente Linux/WSL):
 
