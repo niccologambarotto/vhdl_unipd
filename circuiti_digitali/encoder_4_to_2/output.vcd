@@ -1,0 +1,45 @@
+$date
+  Thu Apr 16 15:17:42 2026
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module textio $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module tb_encoder_dataflow $end
+$var reg 4 ! a[3:0] $end
+$var reg 2 " d[1:0] $end
+$scope module dut $end
+$var reg 4 # i[3:0] $end
+$var reg 2 $ o[1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+b0001 !
+b00 "
+b0001 #
+b00 $
+#5000000
+b0010 !
+b01 "
+b0010 #
+b01 $
+#10000000
+b0100 !
+b10 "
+b0100 #
+b10 $
+#15000000
+b1000 !
+b11 "
+b1000 #
+b11 $
+#20000000
