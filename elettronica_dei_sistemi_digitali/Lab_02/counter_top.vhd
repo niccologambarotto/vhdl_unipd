@@ -62,9 +62,17 @@ COUNTER <= std_logic_vector(to_unsigned(count, 4));
             --if aux_count >= 30000000 then  -- Uncomment for "slowing down" the counter
                 --aux_count <= 0;            -- Uncomment for "slowing down" the counter
                 if DIRECTION = '1' then
-                    count <= count + 1;
+                    if count = 15 then
+                        count <= 0;       -- wrap-around verso l'alto
+                    else
+                        count <= count + 1;
+                    end if;
                 elsif DIRECTION = '0' then
-                    count <= count - 1;
+                    if count = 0 then
+                        count <= 15;      -- wrap-around verso il basso
+                    else
+                        count <= count - 1;
+                    end if;
                 end if;
             
             --end if;                        -- Uncomment for "slowing down" the counter
