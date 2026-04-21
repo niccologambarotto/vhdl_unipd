@@ -23,7 +23,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values -> gonna use this for comodity.
+-- arithmetic functions with Signed or Unsigned values
 use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
@@ -34,28 +34,42 @@ use IEEE.NUMERIC_STD.ALL;
 entity counter_top is
     Port ( CLK : in STD_LOGIC;
            RST : in STD_LOGIC;
-           DIRECTION: in STD_LOGIC; -- It's a switch for counting up or down
-           COUNTER : out STD_LOGIC_VECTOR(3 downto 0));
+           DIRECTION : in STD_LOGIC;
+           COUNTER : out STD_LOGIC_VECTOR (3 downto 0));
 end counter_top;
 
 architecture Behavioral of counter_top is
+
 signal count: integer := 0;
-signal CHECKPOINT: std_logic := '0';
+
+--Uncomment next line if you want to "slow down" the counting
+--signal aux_count: integer := 0;
 
 begin
-    process(CLK, RST)
+
+COUNTER <= std_logic_vector(to_unsigned(count, 4));
+
+    process(CLK,RST)
     begin
-        if RST = '1' then 
-            CHECKPOINT <= '0';
-            count <= 0;
+        if RST = '1' then
+            
+            count <= 0;                     -- Comment for use std_logic_vector counter
+			--aux_count <= 0;				-- Uncomment for "slowing down" the counter
         elsif rising_edge(CLK) then
-            count <= count + 1;
-            CHECKPOINT <= '0';
-            if count >= 9 then 
-                CHECKPOINT <= '1';
-                count <= 0;
-            end if;
+            
+			--aux_count <= aux_count + 1;    -- Uncomment for "slowing down" the counter
+            
+            --if aux_count >= 30000000 then  -- Uncomment for "slowing down" the counter
+                --aux_count <= 0;            -- Uncomment for "slowing down" the counter
+                if DIRECTION = '1' then
+                    count <= count + 1;
+                elsif DIRECTION = '0' then
+                    count <= count - 1;
+                end if;
+            
+            --end if;                        -- Uncomment for "slowing down" the counter
         end if;
     end process;
+
 
 end Behavioral;
