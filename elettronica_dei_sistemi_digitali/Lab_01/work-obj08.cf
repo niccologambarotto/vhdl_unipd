@@ -1,0 +1,7 @@
+v 4
+file . "tb_counter.vhd" "2263e82862a01a999a5d685553636af3482cb7f9" "20260421121309.021":
+  entity tb_counter at 22( 527) + 0 on 13;
+  architecture behavioral of tb_counter at 38( 913) + 0 on 14;
+file . "counter.vhd" "27b77de1ce5f04793472553c7c21a275caef91fb" "20260421121309.020":
+  entity counter at 22( 510) + 0 on 11;
+  architecture behavioral of counter at 40( 978) + 0 on 12;
