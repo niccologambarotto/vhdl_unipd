@@ -1,6 +1,6 @@
 GHDL = ghdl
 STD = --std=08
-TOP = tb_isPrime_struct
+TOP = tb_isPrime
 
 all:
 	$(GHDL) -a $(STD) portelogiche.vhd

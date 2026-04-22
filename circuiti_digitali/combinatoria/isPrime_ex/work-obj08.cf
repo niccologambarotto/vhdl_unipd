@@ -1,0 +1,22 @@
+v 4
+file . "tb_isPrime_struct.vhd" "8301d65f88f22443967b9499501f5fad87a96e10" "20260422143814.260":
+  entity tb_isprime_struct at 1( 0) + 0 on 81;
+  architecture test2 of tb_isprime_struct at 7( 96) + 0 on 82;
+file . "tb_isPrime_dataflow.vhd" "52fbe0f1ca860c817622fdcea9f7ad5b5b7cde09" "20260422143814.260":
+  entity tb_isprime at 1( 0) + 0 on 79;
+  architecture test of tb_isprime at 7( 82) + 0 on 80;
+file . "isPrime_structural.vhd" "ffbdcc84daae6c8ae79b29af3e73900304129c66" "20260422143814.252":
+  entity isprime_struc at 1( 0) + 0 on 69;
+  architecture struct of isprime_struc at 10( 167) + 0 on 0;
+file . "isPrime_dataflow.vhd" "8e1bef7440336370669b5bdb8aa5fb4c3308b186" "20260422143814.250":
+  entity isprime at 1( 0) + 0 on 67;
+  architecture dataflow of isprime at 9( 154) + 0 on 68;
+file . "portelogiche.vhd" "bfd7d17a91843a98de9d1588cc37627161bd9396" "20260422143814.259":
+  entity inverter at 1( 0) + 0 on 71;
+  architecture rtl of inverter at 10( 150) + 0 on 72;
+  entity and2 at 16( 222) + 0 on 73;
+  architecture rtl of and2 at 24( 349) + 0 on 74;
+  entity and3 at 30( 420) + 0 on 75;
+  architecture rtl of and3 at 38( 550) + 0 on 76;
+  entity or4 at 44( 626) + 0 on 77;
+  architecture rtl of or4 at 52( 757) + 0 on 78;

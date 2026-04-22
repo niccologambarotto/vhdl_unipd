@@ -17,9 +17,9 @@ DUT: isPrime
     process
     begin
         -- Gli diamo un numero primo
-        num <= "0100";
+        num <= "0101";
         wait for 5 ns;
-        report "0100 -> e' primo? ";
+        report "0101 -> e' primo? ";
         if(prime = '1') then report "Si";
         else report "No";
         end if;

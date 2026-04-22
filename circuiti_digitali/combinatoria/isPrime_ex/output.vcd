@@ -1,5 +1,5 @@
 $date
-  Wed Apr 15 12:43:45 2026
+  Wed Apr 22 16:38:14 2026
 $end
 $version
   GHDL v0
@@ -23,8 +23,8 @@ $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
-b0100 !
-0"
-b0100 #
-0$
+b0101 !
+1"
+b0101 #
+1$
 #5000000
