@@ -1,7 +1,10 @@
 v 4
-file . "tb_isPrime_struct.vhd" "8301d65f88f22443967b9499501f5fad87a96e10" "20260415124323.051":
-  entity tb_isprime_struct at 1( 0) + 0 on 25;
-  architecture test2 of tb_isprime_struct at 7( 96) + 0 on 26;
+file . "isPrime_behavioral.vhd" "4cd3005e42a03fe39fa1f1ec049146243440f8c9" "20260422145023.403":
+  entity prime at 1( 0) + 0 on 27;
+  architecture beh of prime at 9( 149) + 0 on 28;
+file . "isPrime_structural.vhd" "ffbdcc84daae6c8ae79b29af3e73900304129c66" "20260415123849.191":
+  entity isprime_struc at 1( 0) + 0 on 19;
+  architecture struct of isprime_struc at 10( 167) + 0 on 20;
 file . "portelogiche.vhd" "bfd7d17a91843a98de9d1588cc37627161bd9396" "20260415123826.847":
   entity inverter at 1( 0) + 0 on 11;
   architecture rtl of inverter at 10( 150) + 0 on 12;
@@ -11,6 +14,6 @@ file . "portelogiche.vhd" "bfd7d17a91843a98de9d1588cc37627161bd9396" "2026041512
   architecture rtl of and3 at 38( 550) + 0 on 16;
   entity or4 at 44( 626) + 0 on 17;
   architecture rtl of or4 at 52( 757) + 0 on 18;
-file . "isPrime_structural.vhd" "ffbdcc84daae6c8ae79b29af3e73900304129c66" "20260415123849.191":
-  entity isprime_struc at 1( 0) + 0 on 19;
-  architecture struct of isprime_struc at 10( 167) + 0 on 20;
+file . "tb_isPrime_struct.vhd" "8301d65f88f22443967b9499501f5fad87a96e10" "20260415124323.051":
+  entity tb_isprime_struct at 1( 0) + 0 on 25;
+  architecture test2 of tb_isprime_struct at 7( 96) + 0 on 26;
