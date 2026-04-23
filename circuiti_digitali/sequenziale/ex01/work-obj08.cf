@@ -1,0 +1,7 @@
+v 4
+file . "tb_shift_register.vhd" "dcf4518d3c9bf212f845d03d4fe74171aa6e4480" "20260423142224.762":
+  entity tb_shift_register at 1( 0) + 0 on 23;
+  architecture test of tb_shift_register at 7( 96) + 0 on 24;
+file . "shift_register.vhd" "bc80fd884a060bfccdc147a731f9fee4b03ee99d" "20260423142224.761":
+  entity shift_register at 1( 0) + 0 on 21;
+  architecture behavioral of shift_register at 11( 223) + 0 on 22;

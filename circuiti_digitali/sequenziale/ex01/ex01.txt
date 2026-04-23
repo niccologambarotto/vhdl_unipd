@@ -1,0 +1,53 @@
+================================================================================
+ESERCIZIO 1 - Registro a Scorrimento (Shift Register)
+================================================================================
+
+OBIETTIVO:
+Implementare un registro a scorrimento seriale a 8 bit in VHDL.
+
+DESCRIZIONE:
+Realizzare un componente che, ad ogni fronte di salita del clock, sposti
+i dati di un bit verso sinistra, inserendo il nuovo bit in ingresso
+nella posizione meno significativa (LSB).
+
+SPECIFICHE DEL COMPONENTE:
+  - Nome entity: shift_register
+  - Porte:
+      clk    : IN  STD_LOGIC                     -- clock
+      rst    : IN  STD_LOGIC                     -- reset sincrono, attivo alto
+      s_in   : IN  STD_LOGIC                     -- ingresso seriale
+      s_out  : OUT STD_LOGIC                     -- uscita seriale (MSB)
+      p_out  : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)  -- uscita parallela
+
+COMPORTAMENTO ATTESO:
+  - Con rst = '1': tutti i bit del registro vengono azzerati
+  - Con rst = '0': ad ogni fronte di salita del clock
+      * il contenuto del registro scorre di un bit verso sinistra
+      * s_in viene inserito in posizione 0 (LSB)
+      * s_out riflette sempre il bit in posizione 7 (MSB)
+      * p_out riflette lo stato attuale del registro
+
+ESEMPIO DI FUNZIONAMENTO:
+  Stato iniziale:  reg = "00000000"
+  Ciclo 1: s_in='1' -> reg = "00000001", s_out='0'
+  Ciclo 2: s_in='1' -> reg = "00000011", s_out='0'
+  Ciclo 3: s_in='0' -> reg = "00000110", s_out='0'
+  Ciclo 4: s_in='1' -> reg = "00001101", s_out='0'
+  ...dopo 8 cicli il primo '1' inserito raggiunge s_out
+
+CONSEGNA:
+  File richiesti:
+    1. shift_register.vhd   -> implementazione del componente
+    2. tb_shift_register.vhd -> testbench che verifichi almeno:
+         a) il corretto funzionamento del reset sincrono
+         b) una sequenza di almeno 10 bit in ingresso
+         c) la correttezza di p_out e s_out ad ogni ciclo
+
+SUGGERIMENTI:
+  - Usa un segnale interno reg : STD_LOGIC_VECTOR(7 DOWNTO 0)
+  - L'operazione di shift si può esprimere in modo compatto
+    usando la concatenazione: reg <= reg(6 DOWNTO 0) & s_in
+  - Ricorda di includere la libreria IEEE.STD_LOGIC_1164
+
+DIFFICOLTA': ★☆☆☆☆
+================================================================================

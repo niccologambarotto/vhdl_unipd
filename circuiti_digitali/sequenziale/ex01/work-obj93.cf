@@ -1,0 +1,4 @@
+v 4
+file . "shift_register.vhd" "bc80fd884a060bfccdc147a731f9fee4b03ee99d" "20260423141249.833":
+  entity shift_register at 1( 0) + 0 on 21;
+  architecture behavioral of shift_register at 11( 223) + 0 on 22;
