@@ -48,16 +48,25 @@ architecture Behavioral of seg7_controller_top is
            SEG : out STD_LOGIC_VECTOR (6 downto 0));
 	end component;
 
+    component counters is
+    Port ( CLK : in STD_LOGIC;
+           RST : in STD_LOGIC;
+           CHECKPOINT : out STD_LOGIC);
+    end component;
 signal counter: integer := 0;
 signal group0_data, group1_data, group2_data, group3_data: std_logic_vector(6 downto 0);
 signal selector: std_logic_vector(1 downto 0);
 
 begin
-    
--- How many components? Which port map? 
+-- How many components? Which port map?
+coverter1: hex_to_7seg_decoder port map(BIN => SW(3 downto 0), SEG => group0_data);
+coverter2: hex_to_7seg_decoder port map(BIN => SW(7 downto 4), SEG => group1_data);
+coverter3: hex_to_7seg_decoder port map(BIN => SW(11 downto 8), SEG => group2_data);
+coverter4: hex_to_7seg_decoder port map(BIN => SW(15 downto 12), SEG => group3_data);
+--contatore: counters port map(CLK => CLK, RST => RST, CHECKPOINT => counter);
 
     process(CLK, RST)
-	--process (CLK) --> for synchronous reset. Remember to change if statement accordingly
+	
     
     begin
     

@@ -1,0 +1,4 @@
+v 4
+file . "seg7_controller_top.vhd" "bec56344c25c743bfa0c012f07aa4505715aa173" "20260429121559.201":
+  entity seg7_controller_top at 22( 452) + 0 on 11;
+  architecture behavioral of seg7_controller_top at 44( 1161) + 0 on 12;
