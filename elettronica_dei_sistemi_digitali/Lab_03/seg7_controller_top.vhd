@@ -33,7 +33,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity seg7_controller_top is
 	--useful generic to set the switching rate
-    Generic(switchingRate: integer := 100000);
+    Generic(switchingRate: integer := 10000);
 		   port(CLK: in std_logic;
                 RST: in std_logic;
                 SW: in std_logic_vector(15 downto 0);
