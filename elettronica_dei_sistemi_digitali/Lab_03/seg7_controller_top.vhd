@@ -42,41 +42,43 @@ entity seg7_controller_top is
 end seg7_controller_top;
 
 architecture Behavioral of seg7_controller_top is
-
+    -- Dichiarazione del component
     component hex_to_7seg_decoder is 
     Port ( BIN : in STD_LOGIC_VECTOR (3 downto 0);
            SEG : out STD_LOGIC_VECTOR (6 downto 0));
 	end component;
-
-signal counter: integer := 0;
+-- Segnali ad uso inteno
+signal counter: integer := 0; -- Per contare fino a switchingrate
 signal group0_data, group1_data, group2_data, group3_data: std_logic_vector(6 downto 0);
 signal selector: std_logic_vector(1 downto 0);
 
 begin
+    -- i singoli decoder collegati a porzioni diverse dllo switch
 coverter1: hex_to_7seg_decoder port map(BIN => SW(3 downto 0), SEG => group0_data);
 coverter2: hex_to_7seg_decoder port map(BIN => SW(7 downto 4), SEG => group1_data);
 coverter3: hex_to_7seg_decoder port map(BIN => SW(11 downto 8), SEG => group2_data);
 coverter4: hex_to_7seg_decoder port map(BIN => SW(15 downto 12), SEG => group3_data);
 
 
-    process(CLK, RST)
-	
-    
+    process(CLK, RST) -- RST asincrono
     begin
     
         if RST = '1' then
         
 			counter <= -1;
-        
+            selector <= "00";
+
         elsif rising_edge(CLK) then
-			counter <= counter + 1;
+			counter <= counter + 1; -- Conto
 			if counter >= switchingRate then 
                 counter <= 0;
+                -- Controllo che selector riparta da 0, altrimenti incremento.
                 if(selector = "11") then 
                     selector <= "00";
                 else
                 selector <= STD_LOGIC_VECTOR(UNSIGNED(selector) + 1);
                 end if;
+                -- Qua in base al valore di selector, attivo un paio di anodi e passo il valore del decoder
                 case selector is
                     when "00" =>
                         CAT <= group0_data;
@@ -91,11 +93,9 @@ coverter4: hex_to_7seg_decoder port map(BIN => SW(15 downto 12), SEG => group3_d
                         CAT <= group3_data;
                         AN <= "00111111";
                     when OTHERS =>
-                        CAT <= "1111111";
+                        CAT <= "1111111"; -- Tutti spenti
                 end case;
             end if;
         end if;
     end process;
-
-
 end Behavioral;
