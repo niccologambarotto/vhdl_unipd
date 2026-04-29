@@ -48,9 +48,9 @@ architecture Behavioral of seg7_controller_top is
            SEG : out STD_LOGIC_VECTOR (6 downto 0));
 	end component;
 
---signal counter: integer := 0;
-
---Other signals?
+signal counter: integer := 0;
+signal group0_data, group1_data, group2_data, group3_data: std_logic_vector(6 downto 0);
+signal selector: std_logic_vector(1 downto 0);
 
 begin
     

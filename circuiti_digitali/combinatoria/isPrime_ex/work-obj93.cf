@@ -1,0 +1,4 @@
+v 4
+file . "isPrime_structural.vhd" "ea8855de854338b523abd5a17fc35f7cfaabea43" "20260429121337.593":
+  entity isprime_struc at 1( 0) + 0 on 11;
+  architecture struct of isprime_struc at 10( 167) + 0 on 12;
