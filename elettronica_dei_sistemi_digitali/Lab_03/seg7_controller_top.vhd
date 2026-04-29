@@ -38,7 +38,7 @@ entity seg7_controller_top is
                 RST: in std_logic;
                 SW: in std_logic_vector(15 downto 0);
                 CAT: out std_logic_vector(6 downto 0);
-                An: out std_logic_vector(7 downto 0));
+                AN: out std_logic_vector(7 downto 0));
 end seg7_controller_top;
 
 architecture Behavioral of seg7_controller_top is
@@ -47,12 +47,6 @@ architecture Behavioral of seg7_controller_top is
     Port ( BIN : in STD_LOGIC_VECTOR (3 downto 0);
            SEG : out STD_LOGIC_VECTOR (6 downto 0));
 	end component;
-
-    --component counters is
-    --Port ( CLK : in STD_LOGIC;
-    --       RST : in STD_LOGIC;
-    --       CHECKPOINT : out STD_LOGIC);
-    --end component;
 
 signal counter: integer := 0;
 signal group0_data, group1_data, group2_data, group3_data: std_logic_vector(6 downto 0);
@@ -63,7 +57,7 @@ coverter1: hex_to_7seg_decoder port map(BIN => SW(3 downto 0), SEG => group0_dat
 coverter2: hex_to_7seg_decoder port map(BIN => SW(7 downto 4), SEG => group1_data);
 coverter3: hex_to_7seg_decoder port map(BIN => SW(11 downto 8), SEG => group2_data);
 coverter4: hex_to_7seg_decoder port map(BIN => SW(15 downto 12), SEG => group3_data);
---contatore: counters port map(CLK => CLK, RST => RST, CHECKPOINT => counter);
+
 
     process(CLK, RST)
 	
@@ -75,7 +69,6 @@ coverter4: hex_to_7seg_decoder port map(BIN => SW(15 downto 12), SEG => group3_d
 			counter <= -1;
         
         elsif rising_edge(CLK) then
-
 			counter <= counter + 1;
 			if counter >= switchingRate then 
                 counter <= 0;
@@ -84,6 +77,22 @@ coverter4: hex_to_7seg_decoder port map(BIN => SW(15 downto 12), SEG => group3_d
                 else
                 selector <= STD_LOGIC_VECTOR(UNSIGNED(selector) + 1);
                 end if;
+                case selector is
+                    when "00" =>
+                        CAT <= group0_data;
+                        AN <= "11111100";
+                    when "01" =>
+                        CAT <= group1_data;
+                        AN <= "11110011";
+                    when "10" =>
+                        CAT <= group2_data;
+                        AN <= "11001111";
+                    when "11" =>
+                        CAT <= group3_data;
+                        AN <= "00111111";
+                    when OTHERS =>
+                        CAT <= "1111111";
+                end case;
             end if;
         end if;
     end process;
